@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>qtquickcontrols2.conf</file>
+        <file>CPU.qml</file>
+        <file>Memory.qml</file>
+        <file>Disk.qml</file>
+        <file>DiskForm.ui.qml</file>
+        <file>LoadAvg.qml</file>
+        <file>LoadAvgForm.ui.qml</file>
+        <file>KernelModule.qml</file>
+        <file>KernelModuleForm.ui.qml</file>
+        <file>SystemInfo.qml</file>
+        <file>SystemInfoForm.ui.qml</file>
+        <file>Variable.qml</file>
+    </qresource>
+</RCC>
