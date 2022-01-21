@@ -9,9 +9,9 @@
         ""
       ],
       "stopAtEntry": false,
-      "cwd": "/home/minipython/桌面/LinuxExercise/client",
+      "cwd": "/home/minipython/桌面/LinuxExercise/server",
       "environment": [],
-      "program": "/home/minipython/桌面/LinuxExercise/client/build/Debug/outDebug",
+      "program": "/home/minipython/桌面/LinuxExercise/server/build/Debug/outDebug",
       "internalConsoleOptions": "openOnSessionStart",
       "MIMode": "gdb",
       "miDebuggerPath": "/usr/bin/gdb",
