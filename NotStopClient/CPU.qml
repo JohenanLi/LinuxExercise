@@ -1,65 +1,44 @@
-import QtQuick 2.12
-import QtQuick.Controls 2.5
-
-Page {
-    width: 1024
-
-    height: 768
-
-
+import QtQuick 2.15
+import QtQuick.Controls 2.15
+Page{
+    visible: true
+    width: 400
+    height: 600
+    title: "cpuloadavg"
+    objectName: "cpupage"
     header: Label {
-        text: qsTr("CPU页面")+"\t\t总共：%x个"+"\t\t可用：%x个"
+        text: qsTr("CPU负载页面")
         font.pixelSize: Qt.application.font.pixelSize * 2
         padding: 10
     }
-    ListModel {
-        id:cpuListModel
-        ListElement {
-            name: "总计"
-            colorCode: "white"
-        }
-        ListElement {
-            name: "核0"
-            colorCode: "grey"
-        }
 
-        ListElement {
-            name: "核1"
-            colorCode: "red"
-        }
+    property QtObject backend
+    property string mytext:""
+    property var cpuLoadModel:ListModel {
+    id: sysInfo
+}
+    Connections{
+        target: backend
+        function onCpuLoadInfo(msg) {
+            cpuLoadModel.clear()
+            var a = JSON.parse(msg)
+            var arr = Object.keys(a);
+            for(var i=0;i<arr.length;i++){
+                cpuLoadModel.append(a["ListElement"+i])
+            }
 
-        ListElement {
-            name: "核2"
-            colorCode: "blue"
         }
-
-        ListElement {
-            name: "核3"
-            colorCode: "purple"
-        }
-        ListElement {
-            name: "核4"
-            colorCode: "pink"
-        }
-        ListElement {
-            name: "核6"
-            colorCode: "yellow"
-        }
-        ListElement {
-            name: "核5"
-            colorCode: "brown"
-        }
-        ListElement {
-            name: "核7"
-            colorCode: "black"
         }
 
 
-    }
     ListView {
         id: cpuListView
+        anchors.rightMargin: 0
+        anchors.bottomMargin: 0
+        anchors.leftMargin: 0
+        anchors.topMargin: 0
         anchors.fill: parent
-        model: cpuListModel
+        model: cpuLoadModel
         spacing: 20
         delegate: Item {
             x: 5
@@ -74,35 +53,25 @@ Page {
                 }
 
                 Text {
-                    text: name+"\t\t"+"cpuMHZ:2400.000"+"\t\t"+"当前状况：可用"
+                    text: name+":"+value
                     anchors.verticalCenter: parent.verticalCenter
                     font.bold: true
                 }
                 spacing: 10
             }
         }
+Slider {
+    id: slider
+    x: 765
+    y: -39
+    value: 0.5
 
-
-    Slider {
-        id: slider
-        x: 767
-        y: -35
-        value: 0.5
-
-        Label {
-            id: label
-            x: 34
-            y: -6
-            text: qsTr("超过x个不可用时报警")
-        }
+    Label {
+        id: label
+        x: 34
+        y: -15
+        text: qsTr("超过x个不可用时报警")
     }
 }
-
-
-
-/*##^##
-Designer {
-    D{i:2;anchors_height:160;anchors_width:110;anchors_x:10;anchors_y:5}
 }
-##^##*/
 }

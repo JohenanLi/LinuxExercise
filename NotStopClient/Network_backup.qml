@@ -4,41 +4,40 @@ Page{
     visible: true
     width: 400
     height: 600
-    title: "memory"
-    objectName: "memorypage"
+    title: "network"
+    objectName: "networkpage"
     header: Label {
-        text: qsTr("内存页面")
+        text: qsTr("网络页面")
         font.pixelSize: Qt.application.font.pixelSize * 2
         padding: 10
     }
 
     property QtObject backend
     property string mytext:""
-    property var memoryModel:ListModel {
+    property var networkModel:ListModel {
     id: sysInfo
 }
     Connections{
         target: backend
-        function onMemoryInfo(msg) {
-            memoryModel.clear()
+        function onNetworkInfo(msg) {
+            networkModel.clear()
             var a = JSON.parse(msg)
-            var arr = Object.keys(a);
-            for(var i=0;i<arr.length;i++){
-                memoryModel.append(a["ListElement"+i])
-            }
+
+            networkModel.append(a)
+
 
         }
         }
 
 
     ListView {
-        id: memoryListView
+        id: networkListView
         anchors.rightMargin: 0
         anchors.bottomMargin: 0
         anchors.leftMargin: 0
         anchors.topMargin: 0
         anchors.fill: parent
-        model: memoryModel
+        model: networkModel
         spacing: 20
         delegate: Item {
             x: 5

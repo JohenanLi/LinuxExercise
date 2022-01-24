@@ -5,6 +5,7 @@ ApplicationWindow{
     width: 400
     height: 600
     title: "Clock"
+    objectname: "item
     flags: Qt.FramelessWindowHint | Qt.Window
     property string currTime:"00:00:00"
     

@@ -44,7 +44,7 @@ ApplicationWindow {
         Disk{
 
         }
-        LoadAvg{
+        Network{
 
         }
         KernelModule{
@@ -72,7 +72,7 @@ ApplicationWindow {
             text :qsTr("硬盘")
         }
         TabButton{
-            text :qsTr("负载状况")
+            text :qsTr("网络")
         }
         TabButton{
             text :qsTr("内核模块")

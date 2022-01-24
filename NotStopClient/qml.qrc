@@ -13,5 +13,7 @@
         <file>SystemInfo.qml</file>
         <file>SystemInfoForm.ui.qml</file>
         <file>Variable.qml</file>
+        <file>Network.qml</file>
+        <file>NetworkForm.ui.qml</file>
     </qresource>
 </RCC>
