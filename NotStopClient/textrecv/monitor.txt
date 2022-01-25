@@ -1,0 +1,198 @@
+总内存大小:15890636
+物理cpu个数:1
+每个物理cpu的核数:4
+cpu总核数:4
+当前可用核数:8
+cpu型号信息:      8  Intel(R) Xeon(R) Platinum 8369HC CPU @ 3.30GHz
+
+
+Tue Jan 25 17:00:18 CST 2022
+1分钟负载:0.13
+5分钟负载:0.13
+15分钟负载:0.20
+------------------------------
+内存信息:
+MemTotal:       15890636 kB
+MemFree:        13802556 kB
+MemAvailable:   14620436 kB
+Buffers:           92564 kB
+Cached:           928164 kB
+SwapCached:            0 kB
+Active:          1153028 kB
+Inactive:         605380 kB
+Active(anon):     736956 kB
+Inactive(anon):     6744 kB
+Active(file):     416072 kB
+Inactive(file):   598636 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Dirty:               324 kB
+Writeback:             0 kB
+AnonPages:        737456 kB
+Mapped:           304504 kB
+Shmem:              7532 kB
+Slab:             191632 kB
+SReclaimable:     109048 kB
+SUnreclaim:        82584 kB
+KernelStack:        7532 kB
+PageTables:        20340 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     7945316 kB
+Committed_AS:    2643056 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:      6144 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:      166584 kB
+DirectMap2M:     3485696 kB
+DirectMap1G:    12582912 kB
+------------------------------
+输入输出设备信息:
+Device            r/s     w/s     rkB/s     wkB/s   rrqm/s   wrqm/s  %rrqm  %wrqm r_await w_await aqu-sz rareq-sz wareq-sz  svctm  %util
+vda            153.40   11.09   3421.10    466.98     0.00    13.62   0.00  55.12    2.58    5.88   0.42    22.30    42.10   0.20   3.27
+
+------------------------------
+文件系统信息:
+Filesystem      Size  Used Avail Use% Mounted on
+udev            7.6G     0  7.6G   0% /dev
+tmpfs           1.6G  7.4M  1.6G   1% /run
+/dev/vda1        50G   37G   11G  78% /
+tmpfs           7.6G  4.0K  7.6G   1% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+tmpfs           7.6G     0  7.6G   0% /sys/fs/cgroup
+tmpfs           1.6G     0  1.6G   0% /run/user/0
+------------------------------
+eth0信息:
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.30.71.253  netmask 255.255.240.0  broadcast 172.30.79.255
+        inet6 fe80::216:3eff:fe18:d002  prefixlen 64  scopeid 0x20<link>
+        ether 00:16:3e:18:d0:02  txqueuelen 1000  (Ethernet)
+        RX packets 13891  bytes 15636679 (15.6 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 4724  bytes 2334993 (2.3 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+------------------------------
+ 已加载模块列表:
+Module                  Size  Used by
+tcp_diag               16384  0
+inet_diag              24576  1 tcp_diag
+ipt_MASQUERADE         16384  3
+nf_nat_masquerade_ipv4    16384  1 ipt_MASQUERADE
+nf_conntrack_netlink    40960  0
+nfnetlink              16384  2 nf_conntrack_netlink
+xfrm_user              32768  1
+xfrm_algo              16384  1 xfrm_user
+iptable_nat            16384  1
+nf_nat_ipv4            16384  1 iptable_nat
+br_netfilter           24576  0
+bridge                155648  1 br_netfilter
+stp                    16384  1 bridge
+llc                    16384  2 bridge,stp
+aufs                  241664  0
+overlay                77824  0
+ip6t_REJECT            16384  1
+nf_reject_ipv6         16384  1 ip6t_REJECT
+nf_log_ipv6            16384  5
+xt_hl                  16384  22
+ip6t_rt                16384  3
+nf_conntrack_ipv6      20480  8
+nf_defrag_ipv6         20480  1 nf_conntrack_ipv6
+ipt_REJECT             16384  1
+nf_reject_ipv4         16384  1 ipt_REJECT
+nf_log_ipv4            16384  5
+nf_log_common          16384  2 nf_log_ipv4,nf_log_ipv6
+xt_LOG                 16384  10
+xt_multiport           16384  12
+xt_limit               16384  13
+xt_tcpudp              16384  30
+xt_addrtype            16384  6
+intel_powerclamp       16384  0
+crct10dif_pclmul       16384  0
+nf_conntrack_ipv4      16384  15
+crc32_pclmul           16384  0
+cirrus                 24576  1
+ghash_clmulni_intel    16384  0
+nf_defrag_ipv4         16384  1 nf_conntrack_ipv4
+xt_conntrack           16384  19
+ttm                   106496  1 cirrus
+pcbc                   16384  0
+drm_kms_helper        172032  1 cirrus
+aesni_intel           188416  1
+drm                   401408  4 drm_kms_helper,cirrus,ttm
+aes_x86_64             20480  1 aesni_intel
+crypto_simd            16384  1 aesni_intel
+fb_sys_fops            16384  1 drm_kms_helper
+glue_helper            16384  1 aesni_intel
+syscopyarea            16384  1 drm_kms_helper
+cryptd                 24576  3 crypto_simd,ghash_clmulni_intel,aesni_intel
+sysfillrect            16384  1 drm_kms_helper
+sysimgblt              16384  1 drm_kms_helper
+shpchp                 36864  0
+ip6table_filter        16384  1
+ip6_tables             28672  53 ip6table_filter
+joydev                 24576  0
+intel_rapl_perf        16384  0
+input_leds             16384  0
+serio_raw              16384  0
+pvpanic                16384  0
+mac_hid                16384  0
+qemu_fw_cfg            16384  0
+nf_conntrack_netbios_ns    16384  0
+nf_conntrack_broadcast    16384  1 nf_conntrack_netbios_ns
+nf_nat_ftp             16384  0
+nf_nat                 32768  3 nf_nat_masquerade_ipv4,nf_nat_ftp,nf_nat_ipv4
+nf_conntrack_ftp       20480  1 nf_nat_ftp
+nf_conntrack          135168  12 xt_conntrack,nf_nat_masquerade_ipv4,nf_conntrack_ipv6,nf_conntrack_ipv4,nf_nat,nf_nat_ftp,ipt_MASQUERADE,nf_conntrack_netbios_ns,nf_nat_ipv4,nf_conntrack_broadcast,nf_conntrack_netlink,nf_conntrack_ftp
+libcrc32c              16384  2 nf_conntrack,nf_nat
+binfmt_misc            20480  1
+sch_fq_codel           20480  9
+iptable_filter         16384  1
+ip_tables              28672  10 iptable_filter,iptable_nat
+x_tables               40960  15 ip6table_filter,xt_conntrack,iptable_filter,xt_LOG,xt_multiport,xt_tcpudp,ipt_MASQUERADE,xt_addrtype,ip6t_rt,ip6_tables,ipt_REJECT,ip_tables,xt_limit,xt_hl,ip6t_REJECT
+autofs4                40960  2
+hid_generic            16384  0
+usbhid                 49152  0
+hid                   122880  2 usbhid,hid_generic
+psmouse               151552  0
+virtio_net             49152  0
+virtio_blk             20480  2
+i2c_piix4              24576  0
+pata_acpi              16384  0
+floppy                 77824  0
+------------------------------
+系统信息:
+内核版本:Linux iZbp1523gzqhydo0qaaw1tZ 4.15.0-163-generic #171-Ubuntu SMP Fri Nov 5 11:55:11 UTC 2021 x86_64
+最近5次登录用户、登录时间:
+reboot   system boot  4.15.0-163-gener Wed Jan 26 00:55   still running
+reboot   system boot  4.15.0-163-gener Tue Jan 25 23:10 - 16:55  (-6:14)
+root     pts/0        175.184.129.41   Wed Jan 19 13:00 - 13:02  (00:01)
+root     pts/5        175.184.129.41   Mon Jan 17 20:42 - 22:54  (02:11)
+root     pts/5        175.184.129.41   Mon Jan 17 20:37 - 20:41  (00:03)
+root     pts/0        175.184.129.41   Mon Jan 17 20:23 - 22:36  (02:13)
+root     pts/5        175.184.129.41   Mon Jan 17 15:25 - 15:25  (00:00)
+root     pts/0        175.184.129.41   Mon Jan 17 13:45 - 15:59  (02:14)
+root     pts/0        222.240.98.194   Sat Jan  8 10:55 - 10:55  (00:00)
+root     pts/0        116.162.95.203   Thu Jan  6 13:20 - 13:21  (00:00)
+最近5条被使用过的命令:
+tric/afl-fuzz -S slave4 -m 1000 -i /root/work/testcases/input_cve/pdf -o /root/work/tortoiseDir/outs/podofoencrypt -- /root/work/tortoiseDir/podofo-0.9.7/build/tools/podofoencrypt/podofoencrypt --rc4v2 -u 1232321 -o 24 @@ /dev/null
+/root/work/collafl-master/afl-fuzz -S slave4 -m 1000 -i /root/work/testcases/input_cve/pdf -o /root/work/collaflDir/outs/podofoencrypt -- /root/work/collaflDir/podofo-0.9.7/build/tools/podofoencrypt/podofoencrypt --rc4v2 -u 1232321 -o 24 @@ /dev/null
+/root/work/memAfl/afl-fuzz -S slave4 -m 1000 -i /root/work/testcases/input_cve/asm -o /root/work/memaflDir/outs/nasm -- /root/work/collaflDir/nasm-2.15.05/nasm  -f elf64 @@
+/root/work/memAfl/afl-fuzz -S slave4 -m 1000 -i /root/work/AggregateFuzzing/BackEnd/seeddir/asm -o /root/work/memaflDir/outs/nasm -- /root/work/collaflDir/nasm-2.15.05/nasm  -f elf64 @@
+/root/work/memAfl/afl-fuzz -S slave4 -m 1000 -i /root/work/testcases/input_cve/asm -o /root/work/memaflDir/outs/nasm -- /root/work/collaflDir/nasm-2.15.05/nasm  -f elf64 @@
+/root/work/memAfl/afl-fuzz -S slave4 -m 1000 -i /root/work/testcases/input_cve/pdf -o /root/work/memaflDir/outs/sam2p -- /root/work/memaflDir/sam2p-0.49.4/sam2p  @@
+------------------------------
