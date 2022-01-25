@@ -208,5 +208,5 @@ if __name__=="__main__":
     # getMemoryInfo()
     # socketConnection()
     # lastSocketConnection()
-    getAllInfo()
-    # fileSocket()
+    # getAllInfo()
+    fileSocket()

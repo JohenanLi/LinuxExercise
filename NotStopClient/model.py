@@ -35,8 +35,8 @@ class Backend(QObject):
         allInfoLines = allInfoStr.split("------------------------------\n")
 
         for i in range(len(allInfoLines)):
-            match i:
-                case 0:
+            try:
+                if i==0:
                     staticInfoList = allInfoLines[i].split("\n")
                     staticInfoDict = {}
                     k = 0
@@ -51,7 +51,7 @@ class Backend(QObject):
                     staticInfoDict["ListElement"+str(k)] = {'name':"数据获取时间","value":staticInfoList[8],"colorCode":randomcolor()}
                     # print(json.dumps(staticInfoDict))
                     self.cpuLoadInfo.emit(json.dumps(staticInfoDict))
-                case 1:
+                elif i== 1:
                     memoryInfoList = allInfoLines[i].split("\n")
                     memoryDict = {}
                     k=0
@@ -64,9 +64,9 @@ class Backend(QObject):
                         memoryDict["ListElement"+str(k)] = tempDict
                         k+= 1
                     self.memoryInfo.emit(json.dumps(memoryDict))
-                case 2:
+                elif i== 2:
                     pass
-                case 3:
+                elif i== 3:
                     diskInfoList = allInfoLines[i].split("\n")
                     diskInfoDict = {}
                     k=0
@@ -79,7 +79,7 @@ class Backend(QObject):
                         k+= 1
                     self.diskInfo.emit(json.dumps(diskInfoDict))
 
-                case 4:
+                elif i== 4:
                     networkiostDict = {}
                     networkList = allInfoLines[i].split("\n")
                     networkDict = {"name":networkList[0],"value":"\n".join(networkList[1:]),"colorCode":randomcolor()}
@@ -90,7 +90,7 @@ class Backend(QObject):
                     iostDict = {"name":iostList[0],"value":"\n".join(iostList[1:]),"colorCode":randomcolor()}
                     networkiostDict["ListElement"+str(k)] = iostDict
                     self.networkInfo.emit(json.dumps(networkiostDict))
-                case 5:
+                elif i== 5:
                     kernelModuleList = allInfoLines[i].split("\n")
                     kernelModuleDict = {}
                     k=0
@@ -102,7 +102,7 @@ class Backend(QObject):
                         kernelModuleDict["ListElement"+str(k)] = tempDict
                         k+= 1
                     self.kernelModuleInfo.emit(json.dumps(kernelModuleDict))
-                case 6:
+                elif i== 6:
                     systemInfoList = allInfoLines[i].split("\n")
                     systemInfoDict = {}
                     k=0
@@ -125,9 +125,13 @@ class Backend(QObject):
                     tempDict['colorCode'] = randomcolor()
                     systemInfoDict["ListElement"+str(k)] = tempDict
                     self.systemInfo.emit(json.dumps(systemInfoDict))
-                case 7:
+                elif i== 7:
                     cpuAvailCount  = re.findall("AVAILABLE",allInfoLines[i])
                     self.cpuCount.emit(cpuAvailCount)
+            except Exception as e:
+                print("数据获取异常")
+                print(e.with_traceback())
+                exit(-1)
 
                     
 

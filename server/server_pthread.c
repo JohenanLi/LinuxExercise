@@ -287,6 +287,7 @@ int main(void)
 {
     //初始化Daemon进程
     init_daemon();
+    printf("start main");
     signal(SIGCHLD,SIG_IGN);
 
     //创建文件

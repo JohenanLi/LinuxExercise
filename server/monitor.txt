@@ -1,55 +1,54 @@
-总内存大小:
-物理cpu个数:1
+总内存大小:N�:j物理cpu个数:1
 每个物理cpu的核数:4
 cpu总核数:4
 当前可用核数:8
 cpu型号信息:      8  Intel(R) Core(TM) i5-9300H CPU @ 2.40GHz
 
 
-2022年 01月 24日 星期一 15:15:37 CST
-1分钟负载:2.50
-5分钟负载:2.50
-15分钟负载:1.78
+2022年 01月 25日 星期二 11:45:30 CST
+1分钟负载:3.64
+5分钟负载:3.64
+15分钟负载:1.83
 ------------------------------
 内存信息:
 MemTotal:       16223512 kB
-MemFree:         7308712 kB
-MemAvailable:   11033064 kB
-Buffers:          637164 kB
-Cached:          3693808 kB
+MemFree:         8813292 kB
+MemAvailable:   11604060 kB
+Buffers:          281536 kB
+Cached:          3405660 kB
 SwapCached:            0 kB
-Active:          2232608 kB
-Inactive:        5267888 kB
-Active(anon):       8992 kB
-Inactive(anon):  3841972 kB
-Active(file):    2223616 kB
-Inactive(file):  1425916 kB
-Unevictable:      573248 kB
-Mlocked:             192 kB
+Active:          1344276 kB
+Inactive:        4802428 kB
+Active(anon):       8276 kB
+Inactive(anon):  3243840 kB
+Active(file):    1336000 kB
+Inactive(file):  1558588 kB
+Unevictable:      622332 kB
+Mlocked:              64 kB
 SwapTotal:             0 kB
 SwapFree:              0 kB
-Dirty:               368 kB
+Dirty:                56 kB
 Writeback:             0 kB
-AnonPages:       3424724 kB
-Mapped:          1041124 kB
-Shmem:            683104 kB
-KReclaimable:     415340 kB
-Slab:             542024 kB
-SReclaimable:     415340 kB
-SUnreclaim:       126684 kB
-KernelStack:       18080 kB
-PageTables:        43836 kB
+AnonPages:       3005828 kB
+Mapped:           854356 kB
+Shmem:            794368 kB
+KReclaimable:     236700 kB
+Slab:             352064 kB
+SReclaimable:     236700 kB
+SUnreclaim:       115364 kB
+KernelStack:       15920 kB
+PageTables:        42112 kB
 NFS_Unstable:          0 kB
 Bounce:                0 kB
 WritebackTmp:          0 kB
 CommitLimit:     8111756 kB
-Committed_AS:   12695728 kB
+Committed_AS:   13659756 kB
 VmallocTotal:   34359738367 kB
-VmallocUsed:       47240 kB
+VmallocUsed:       44952 kB
 VmallocChunk:          0 kB
-Percpu:             6720 kB
+Percpu:             6624 kB
 HardwareCorrupted:     0 kB
-AnonHugePages:   1071104 kB
+AnonHugePages:    626688 kB
 ShmemHugePages:        0 kB
 ShmemPmdMapped:        0 kB
 FileHugePages:         0 kB
@@ -60,13 +59,13 @@ HugePages_Rsvd:        0
 HugePages_Surp:        0
 Hugepagesize:       2048 kB
 Hugetlb:               0 kB
-DirectMap4k:      472512 kB
-DirectMap2M:    12992512 kB
-DirectMap1G:     3145728 kB
+DirectMap4k:      265664 kB
+DirectMap2M:     9005056 kB
+DirectMap1G:     7340032 kB
 ------------------------------
 输入输出设备信息:
 Device            r/s     rkB/s   rrqm/s  %rrqm r_await rareq-sz     w/s     wkB/s   wrqm/s  %wrqm w_await wareq-sz     d/s     dkB/s   drqm/s  %drqm d_await dareq-sz     f/s f_await  aqu-sz  %util
-nvme0n1         14.16    356.84     7.54  34.74    0.22    25.21   19.13    245.35    16.55  46.38    4.34    12.82    9.20   2905.67     0.00   0.00    0.33   315.97    1.65    0.38    0.09   2.35
+nvme0n1         52.27   1499.87    29.47  36.05    0.31    28.69   15.23    562.51    23.36  60.54    3.46    36.94    0.00      0.00     0.00   0.00    0.00     0.00    1.27    0.54    0.07   3.47
 
 
 ------------------------------
@@ -74,8 +73,8 @@ nvme0n1         14.16    356.84     7.54  34.74    0.22    25.21   19.13    245.
 文件系统        容量  已用  可用 已用% 挂载点
 udev            7.7G     0  7.7G    0% /dev
 tmpfs           1.6G  1.7M  1.6G    1% /run
-/dev/nvme0n1p6  128G  101G   21G   84% /
-tmpfs           7.8G   75M  7.7G    1% /dev/shm
+/dev/nvme0n1p6  128G  102G   20G   85% /
+tmpfs           7.8G  153M  7.6G    2% /dev/shm
 tmpfs           5.0M     0  5.0M    0% /run/lock
 /dev/nvme0n1p1   96M   69M   28M   72% /boot/efi
 tmpfs           1.6G   92K  1.6G    1% /run/user/1000
@@ -102,93 +101,93 @@ snd_seq                90112  7 snd_seq_dummy
 snd_seq_device         16384  1 snd_seq
 intel_rapl_msr         20480  0
 intel_rapl_common      28672  1 intel_rapl_msr
-snd_sof_pci_intel_cnl    16384  0
-mei_hdcp               24576  0
-snd_sof_intel_hda_common   110592  1 snd_sof_pci_intel_cnl
-soundwire_intel        45056  1 snd_sof_intel_hda_common
-soundwire_generic_allocation    16384  1 soundwire_intel
-soundwire_cadence      40960  1 soundwire_intel
-snd_sof_intel_hda      20480  1 snd_sof_intel_hda_common
-snd_sof_pci            20480  2 snd_sof_intel_hda_common,snd_sof_pci_intel_cnl
-snd_sof_xtensa_dsp     16384  1 snd_sof_intel_hda_common
-snd_sof               147456  2 snd_sof_pci,snd_sof_intel_hda_common
 btusb                  65536  0
+snd_sof_pci_intel_cnl    16384  0
 btrtl                  28672  1 btusb
 btbcm                  20480  1 btusb
-soundwire_bus          94208  3 soundwire_intel,soundwire_generic_allocation,soundwire_cadence
+snd_sof_intel_hda_common   110592  1 snd_sof_pci_intel_cnl
 btintel                45056  1 btusb
-snd_soc_skl           180224  0
-iwlmvm                352256  0
-bluetooth             753664  5 btrtl,btintel,btbcm,btusb
-snd_soc_hdac_hda       24576  2 snd_sof_intel_hda_common,snd_soc_skl
+soundwire_intel        45056  1 snd_sof_intel_hda_common
 x86_pkg_temp_thermal    20480  0
+soundwire_generic_allocation    16384  1 soundwire_intel
 intel_powerclamp       20480  0
-snd_hda_ext_core       36864  4 snd_sof_intel_hda_common,snd_soc_hdac_hda,snd_soc_skl,snd_sof_intel_hda
+mei_hdcp               24576  0
+soundwire_cadence      40960  1 soundwire_intel
 coretemp               20480  0
-snd_soc_sst_ipc        20480  1 snd_soc_skl
+snd_sof_intel_hda      20480  1 snd_sof_intel_hda_common
+bluetooth             753664  5 btrtl,btintel,btbcm,btusb
+snd_sof_pci            20480  2 snd_sof_intel_hda_common,snd_sof_pci_intel_cnl
+iwlmvm                352256  0
+snd_sof_xtensa_dsp     16384  1 snd_sof_intel_hda_common
+snd_sof               147456  2 snd_sof_pci,snd_sof_intel_hda_common
 kvm_intel             323584  0
-jitterentropy_rng      16384  1
-snd_soc_sst_dsp        36864  1 snd_soc_skl
-snd_soc_acpi_intel_match    57344  3 snd_sof_intel_hda_common,snd_soc_skl,snd_sof_pci_intel_cnl
 mac80211             1060864  1 iwlmvm
-libarc4                16384  1 mac80211
-sha512_ssse3           49152  1
 binfmt_misc            24576  1
 snd_ctl_led            24576  0
-sha512_generic         16384  1 sha512_ssse3
-iwlwifi               315392  1 iwlmvm
-snd_soc_acpi           16384  3 snd_soc_acpi_intel_match,snd_sof_intel_hda_common,snd_soc_skl
-kvm                  1028096  1 kvm_intel
-drbg                   40960  1
-irqbypass              16384  1 kvm
-ansi_cprng             16384  0
+libarc4                16384  1 mac80211
+soundwire_bus          94208  3 soundwire_intel,soundwire_generic_allocation,soundwire_cadence
 nls_ascii              16384  1
-rapl                   20480  0
+jitterentropy_rng      16384  1
+kvm                  1028096  1 kvm_intel
 nls_cp437              20480  1
-snd_soc_core          331776  5 soundwire_intel,snd_sof,snd_sof_intel_hda_common,snd_soc_hdac_hda,snd_soc_skl
+snd_soc_skl           180224  0
+iwlwifi               315392  1 iwlmvm
+sha512_ssse3           49152  1
+snd_soc_hdac_hda       24576  2 snd_sof_intel_hda_common,snd_soc_skl
 vfat                   20480  1
-intel_cstate           20480  0
+sha512_generic         16384  1 sha512_ssse3
+irqbypass              16384  1 kvm
+snd_hda_ext_core       36864  4 snd_sof_intel_hda_common,snd_soc_hdac_hda,snd_soc_skl,snd_sof_intel_hda
+drbg                   40960  1
+fat                    86016  1 vfat
+snd_soc_sst_ipc        20480  1 snd_soc_skl
+rapl                   20480  0
 snd_hda_codec_realtek   159744  1
+ansi_cprng             16384  0
+snd_soc_sst_dsp        36864  1 snd_soc_skl
+intel_cstate           20480  0
 cfg80211             1036288  3 iwlmvm,iwlwifi,mac80211
 acer_wmi               28672  0
+snd_soc_acpi_intel_match    57344  3 snd_sof_intel_hda_common,snd_soc_skl,snd_sof_pci_intel_cnl
 snd_hda_codec_generic    98304  1 snd_hda_codec_realtek
-ecdh_generic           16384  1 bluetooth
+snd_soc_acpi           16384  3 snd_soc_acpi_intel_match,snd_sof_intel_hda_common,snd_soc_skl
 sparse_keymap          16384  1 acer_wmi
+ecdh_generic           16384  1 bluetooth
 ledtrig_audio          16384  3 snd_ctl_led,snd_hda_codec_generic,snd_sof
-fat                    86016  1 vfat
-snd_hda_codec_hdmi     73728  2
 intel_uncore          204800  0
-snd_compress           28672  1 snd_soc_core
-snd_hda_intel          57344  6
+snd_hda_codec_hdmi     73728  2
+efi_pstore             16384  0
+serio_raw              20480  0
+pcspkr                 16384  0
+snd_soc_core          331776  5 soundwire_intel,snd_sof,snd_sof_intel_hda_common,snd_soc_hdac_hda,snd_soc_skl
 uvcvideo              118784  0
+snd_compress           28672  1 snd_soc_core
+videobuf2_vmalloc      20480  1 uvcvideo
+videobuf2_memops       20480  1 videobuf2_vmalloc
+videobuf2_v4l2         36864  1 uvcvideo
+joydev                 28672  0
+videobuf2_common       69632  4 videobuf2_vmalloc,videobuf2_v4l2,uvcvideo,videobuf2_memops
+intel_wmi_thunderbolt    20480  0
+snd_hda_intel          57344  6
+videodev              270336  3 videobuf2_v4l2,uvcvideo,videobuf2_common
 snd_intel_dspcfg       28672  3 snd_hda_intel,snd_sof_intel_hda_common,snd_soc_skl
 snd_intel_sdw_acpi     20480  2 snd_sof_intel_hda_common,snd_intel_dspcfg
-videobuf2_vmalloc      20480  1 uvcvideo
-serio_raw              20480  0
-efi_pstore             16384  0
-videobuf2_memops       20480  1 videobuf2_vmalloc
-pcspkr                 16384  0
-snd_hda_codec         176128  5 snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec_realtek,snd_soc_hdac_hda
-videobuf2_v4l2         36864  1 uvcvideo
-intel_wmi_thunderbolt    20480  0
-videobuf2_common       69632  4 videobuf2_vmalloc,videobuf2_v4l2,uvcvideo,videobuf2_memops
-snd_hda_core          110592  10 snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_ext_core,snd_hda_codec,snd_hda_codec_realtek,snd_sof_intel_hda_common,snd_soc_hdac_hda,snd_soc_skl,snd_sof_intel_hda
-snd_hwdep              16384  1 snd_hda_codec
-snd_pcm               143360  10 snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec,soundwire_intel,snd_sof,snd_sof_intel_hda_common,snd_compress,snd_soc_core,snd_soc_skl,snd_hda_core
-iTCO_wdt               16384  0
-intel_pmc_bxt          16384  1 iTCO_wdt
-snd_timer              49152  3 snd_seq,snd_hrtimer,snd_pcm
-videodev              270336  3 videobuf2_v4l2,uvcvideo,videobuf2_common
-iTCO_vendor_support    16384  1 iTCO_wdt
-mei_me                 45056  1
-wmi_bmof               16384  0
-ee1004                 20480  0
-snd                   114688  27 snd_ctl_led,snd_hda_codec_generic,snd_seq,snd_seq_device,snd_hda_codec_hdmi,snd_hwdep,snd_hda_intel,snd_hda_codec,snd_hda_codec_realtek,snd_timer,snd_compress,snd_soc_core,snd_pcm
-joydev                 28672  0
-watchdog               32768  1 iTCO_wdt
 mc                     65536  4 videodev,videobuf2_v4l2,uvcvideo,videobuf2_common
+snd_hda_codec         176128  5 snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec_realtek,snd_soc_hdac_hda
+iTCO_wdt               16384  0
+wmi_bmof               16384  0
+intel_pmc_bxt          16384  1 iTCO_wdt
+iTCO_vendor_support    16384  1 iTCO_wdt
+snd_hda_core          110592  10 snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_ext_core,snd_hda_codec,snd_hda_codec_realtek,snd_sof_intel_hda_common,snd_soc_hdac_hda,snd_soc_skl,snd_sof_intel_hda
 ecc                    40960  1 ecdh_generic
-rfkill                 32768  7 acer_wmi,bluetooth,cfg80211
+snd_hwdep              16384  1 snd_hda_codec
+ee1004                 20480  0
+watchdog               32768  1 iTCO_wdt
+snd_pcm               143360  10 snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec,soundwire_intel,snd_sof,snd_sof_intel_hda_common,snd_compress,snd_soc_core,snd_soc_skl,snd_hda_core
+mei_me                 45056  1
+snd_timer              49152  3 snd_seq,snd_hrtimer,snd_pcm
+snd                   114688  27 snd_ctl_led,snd_hda_codec_generic,snd_seq,snd_seq_device,snd_hda_codec_hdmi,snd_hwdep,snd_hda_intel,snd_hda_codec,snd_hda_codec_realtek,snd_timer,snd_compress,snd_soc_core,snd_pcm
+rfkill                 32768  6 acer_wmi,bluetooth,cfg80211
 hid_multitouch         32768  0
 mei                   151552  3 mei_hdcp,mei_me
 soundcore              16384  2 snd_ctl_led,snd
@@ -211,51 +210,51 @@ crc16                  16384  2 bluetooth,ext4
 mbcache                16384  1 ext4
 jbd2                  167936  1 ext4
 crc32c_generic         16384  0
-hid_generic            16384  0
 usbhid                 65536  0
+hid_generic            16384  0
 crc32_pclmul           16384  0
 crc32c_intel           24576  2
 ghash_clmulni_intel    16384  0
+i915                 3051520  22
 nouveau              2412544  1
-i915                 3051520  36
 mxm_wmi                16384  1 nouveau
-drm_ttm_helper         16384  1 nouveau
 i2c_algo_bit           16384  2 i915,nouveau
-aesni_intel           380928  6
-nvme                   49152  2
-crypto_simd            16384  1 aesni_intel
-cryptd                 24576  2 crypto_simd,ghash_clmulni_intel
-ahci                   45056  0
+drm_ttm_helper         16384  1 nouveau
 ttm                    81920  3 drm_ttm_helper,i915,nouveau
-libahci                45056  1 ahci
-nvme_core             139264  3 nvme
-r8169                  98304  0
-t10_pi                 16384  1 nvme_core
-drm_kms_helper        307200  2 i915,nouveau
-crc_t10dif             20480  1 t10_pi
 xhci_pci               20480  0
+drm_kms_helper        307200  2 i915,nouveau
+xhci_hcd              311296  1 xhci_pci
+cec                    61440  2 drm_kms_helper,i915
+aesni_intel           380928  6
+rc_core                65536  1 cec
+nvme                   49152  2
+ahci                   45056  0
+r8169                  98304  0
+crypto_simd            16384  1 aesni_intel
+libahci                45056  1 ahci
+cryptd                 24576  2 crypto_simd,ghash_clmulni_intel
 realtek                36864  1
-libata                294912  2 libahci,ahci
+nvme_core             139264  3 nvme
 i2c_i801               32768  0
 mdio_devres            16384  1 r8169
-crct10dif_generic      16384  0
-intel_lpss_pci         28672  0
+libata                294912  2 libahci,ahci
+t10_pi                 16384  1 nvme_core
 i2c_smbus              20480  1 i2c_i801
-cec                    61440  2 drm_kms_helper,i915
-xhci_hcd              311296  1 xhci_pci
-scsi_mod              270336  1 libata
-intel_lpss             16384  1 intel_lpss_pci
-crct10dif_pclmul       16384  1
-rc_core                65536  1 cec
+crc_t10dif             20480  1 t10_pi
+crct10dif_generic      16384  0
 libphy                159744  3 r8169,mdio_devres,realtek
+crct10dif_pclmul       16384  1
+usbcore               331776  5 xhci_hcd,usbhid,uvcvideo,btusb,xhci_pci
+intel_lpss_pci         28672  0
+scsi_mod              270336  1 libata
 crct10dif_common       16384  3 crct10dif_generic,crc_t10dif,crct10dif_pclmul
+intel_lpss             16384  1 intel_lpss_pci
 scsi_common            16384  2 scsi_mod,libata
 idma64                 20480  0
-usbcore               331776  5 xhci_hcd,usbhid,uvcvideo,btusb,xhci_pci
+drm                   634880  15 drm_kms_helper,drm_ttm_helper,i915,ttm,nouveau
+usb_common             16384  3 xhci_hcd,usbcore,uvcvideo
 i2c_hid_acpi           16384  0
 i2c_hid                32768  1 i2c_hid_acpi
-usb_common             16384  3 xhci_hcd,usbcore,uvcvideo
-drm                   634880  18 drm_kms_helper,drm_ttm_helper,i915,ttm,nouveau
 hid                   151552  4 i2c_hid,usbhid,hid_multitouch,hid_generic
 battery                28672  0
 wmi                    36864  5 intel_wmi_thunderbolt,acer_wmi,wmi_bmof,mxm_wmi,nouveau
@@ -266,16 +265,16 @@ button                 24576  1 nouveau
 内核版本:Linux LAPTOP-D0PI60GK 5.15.0-kali2-amd64 #1 SMP Debian 5.15.5-2kali2 (2021-12-22) x86_64 GNU/Linux
 
 最近5次登录用户、登录时间:
-minipyth :1           :1               Mon Jan 24 12:36   still logged in
-reboot   system boot  5.15.0-kali2-amd Mon Jan 24 12:35   still running
+minipyth :1           :1               Tue Jan 25 11:19   still logged in
+reboot   system boot  5.15.0-kali2-amd Tue Jan 25 11:19   still running
+minipyth :1           :1               Mon Jan 24 12:36 - down   (10:30)
+reboot   system boot  5.15.0-kali2-amd Mon Jan 24 12:35 - 23:06  (10:30)
 minipyth :1           :1               Sun Jan 23 22:28 - down   (00:02)
 reboot   system boot  5.15.0-kali2-amd Sun Jan 23 22:27 - 22:30  (00:03)
 minipyth :1           :1               Sun Jan 23 13:53 - down   (07:53)
 reboot   system boot  5.15.0-kali2-amd Sun Jan 23 13:52 - 21:46  (07:53)
 minipyth :1           :1               Sat Jan 22 19:39 - down   (03:56)
 reboot   system boot  5.15.0-kali2-amd Sat Jan 22 19:39 - 23:36  (03:56)
-minipyth :1           :1               Sat Jan 22 11:38 - down   (08:00)
-reboot   system boot  5.15.0-kali2-amd Sat Jan 22 11:38 - 19:39  (08:00)
 最近5条被使用过的命令:
 `
 echo "[`date +%y%m%d/%H:%M:%S`]"
@@ -284,11 +283,11 @@ Date ='`date +%y%m%d/%H:%M:%S`'
 Date ='date +%y%m%d/%H:%M:%S'
 exit
 ------------------------------
-    Core #2:  AVAILABLE     (100%)
-    Core #1:  AVAILABLE     (107%)
-    Core #6:  AVAILABLE     (104%)
-    Core #7:  CAUTION     (111%)
-    Core #3:  CAUTION     (125%)
-    Core #0:  AVAILABLE     (101%)
-    Core #4:  AVAILABLE     (101%)
-    Core #5:  AVAILABLE     (102%)
+    Core #0:  AVAILABLE     (100%)
+    Core #4:  AVAILABLE     (100%)
+    Core #6:  AVAILABLE     (108%)
+    Core #1:  AVAILABLE     (102%)
+    Core #5:  AVAILABLE     (100%)
+    Core #3:  AVAILABLE     (107%)
+    Core #2:  CAUTION     (111%)
+    Core #7:  AVAILABLE     (105%)
