@@ -1,53 +1,53 @@
-×ÜÄÚ´æ´óĞ¡:15890636
-ÎïÀícpu¸öÊı:1
-Ã¿¸öÎïÀícpuµÄºËÊı:4
-cpu×ÜºËÊı:4
-µ±Ç°¿ÉÓÃºËÊı:8
-cpuĞÍºÅĞÅÏ¢:      8  Intel(R) Xeon(R) Platinum 8369HC CPU @ 3.30GHz
+æ€»å†…å­˜å¤§å°:15890636
+ç‰©ç†cpuä¸ªæ•°:1
+æ¯ä¸ªç‰©ç†cpuçš„æ ¸æ•°:4
+cpuæ€»æ ¸æ•°:4
+å½“å‰å¯ç”¨æ ¸æ•°:8
+cpuå‹å·ä¿¡æ¯:      8  Intel(R) Xeon(R) Platinum 8369HC CPU @ 3.30GHz
 
 
-Tue Jan 25 17:00:18 CST 2022
-1·ÖÖÓ¸ºÔØ:0.13
-5·ÖÖÓ¸ºÔØ:0.13
-15·ÖÖÓ¸ºÔØ:0.20
+Tue Jan 25 17:39:16 CST 2022
+1åˆ†é’Ÿè´Ÿè½½:1.39
+5åˆ†é’Ÿè´Ÿè½½:1.39
+15åˆ†é’Ÿè´Ÿè½½:1.40
 ------------------------------
-ÄÚ´æĞÅÏ¢:
+å†…å­˜ä¿¡æ¯:
 MemTotal:       15890636 kB
-MemFree:        13802556 kB
-MemAvailable:   14620436 kB
-Buffers:           92564 kB
-Cached:           928164 kB
+MemFree:        14265368 kB
+MemAvailable:   15121040 kB
+Buffers:           99216 kB
+Cached:           953304 kB
 SwapCached:            0 kB
-Active:          1153028 kB
-Inactive:         605380 kB
-Active(anon):     736956 kB
-Inactive(anon):     6744 kB
-Active(file):     416072 kB
-Inactive(file):   598636 kB
+Active:           703152 kB
+Inactive:         582156 kB
+Active(anon):     231060 kB
+Inactive(anon):     6764 kB
+Active(file):     472092 kB
+Inactive(file):   575392 kB
 Unevictable:           0 kB
 Mlocked:               0 kB
 SwapTotal:             0 kB
 SwapFree:              0 kB
-Dirty:               324 kB
+Dirty:                72 kB
 Writeback:             0 kB
-AnonPages:        737456 kB
-Mapped:           304504 kB
-Shmem:              7532 kB
-Slab:             191632 kB
-SReclaimable:     109048 kB
-SUnreclaim:        82584 kB
-KernelStack:        7532 kB
-PageTables:        20340 kB
+AnonPages:        229440 kB
+Mapped:           201276 kB
+Shmem:              7552 kB
+Slab:             207580 kB
+SReclaimable:     119072 kB
+SUnreclaim:        88508 kB
+KernelStack:        5444 kB
+PageTables:        12916 kB
 NFS_Unstable:          0 kB
 Bounce:                0 kB
 WritebackTmp:          0 kB
 CommitLimit:     7945316 kB
-Committed_AS:    2643056 kB
+Committed_AS:    1726040 kB
 VmallocTotal:   34359738367 kB
 VmallocUsed:           0 kB
 VmallocChunk:          0 kB
 HardwareCorrupted:     0 kB
-AnonHugePages:      6144 kB
+AnonHugePages:         0 kB
 ShmemHugePages:        0 kB
 ShmemPmdMapped:        0 kB
 CmaTotal:              0 kB
@@ -61,12 +61,12 @@ DirectMap4k:      166584 kB
 DirectMap2M:     3485696 kB
 DirectMap1G:    12582912 kB
 ------------------------------
-ÊäÈëÊä³öÉè±¸ĞÅÏ¢:
+è¾“å…¥è¾“å‡ºè®¾å¤‡ä¿¡æ¯:
 Device            r/s     w/s     rkB/s     wkB/s   rrqm/s   wrqm/s  %rrqm  %wrqm r_await w_await aqu-sz rareq-sz wareq-sz  svctm  %util
-vda            153.40   11.09   3421.10    466.98     0.00    13.62   0.00  55.12    2.58    5.88   0.42    22.30    42.10   0.20   3.27
+vda             15.78    3.34    354.59     70.39     0.00     4.02   0.00  54.66    2.55    2.15   0.04    22.48    21.09   0.18   0.34
 
 ------------------------------
-ÎÄ¼şÏµÍ³ĞÅÏ¢:
+æ–‡ä»¶ç³»ç»Ÿä¿¡æ¯:
 Filesystem      Size  Used Avail Use% Mounted on
 udev            7.6G     0  7.6G   0% /dev
 tmpfs           1.6G  7.4M  1.6G   1% /run
@@ -76,18 +76,18 @@ tmpfs           5.0M     0  5.0M   0% /run/lock
 tmpfs           7.6G     0  7.6G   0% /sys/fs/cgroup
 tmpfs           1.6G     0  1.6G   0% /run/user/0
 ------------------------------
-eth0ĞÅÏ¢:
+eth0ä¿¡æ¯:
 eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
         inet 172.30.71.253  netmask 255.255.240.0  broadcast 172.30.79.255
         inet6 fe80::216:3eff:fe18:d002  prefixlen 64  scopeid 0x20<link>
         ether 00:16:3e:18:d0:02  txqueuelen 1000  (Ethernet)
-        RX packets 13891  bytes 15636679 (15.6 MB)
+        RX packets 19294  bytes 16365680 (16.3 MB)
         RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 4724  bytes 2334993 (2.3 MB)
+        TX packets 8710  bytes 5766692 (5.7 MB)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 
 ------------------------------
- ÒÑ¼ÓÔØÄ£¿éÁĞ±í:
+ å·²åŠ è½½æ¨¡å—åˆ—è¡¨:
 Module                  Size  Used by
 tcp_diag               16384  0
 inet_diag              24576  1 tcp_diag
@@ -175,9 +175,9 @@ i2c_piix4              24576  0
 pata_acpi              16384  0
 floppy                 77824  0
 ------------------------------
-ÏµÍ³ĞÅÏ¢:
-ÄÚºË°æ±¾:Linux iZbp1523gzqhydo0qaaw1tZ 4.15.0-163-generic #171-Ubuntu SMP Fri Nov 5 11:55:11 UTC 2021 x86_64
-×î½ü5´ÎµÇÂ¼ÓÃ»§¡¢µÇÂ¼Ê±¼ä:
+ç³»ç»Ÿä¿¡æ¯:
+å†…æ ¸ç‰ˆæœ¬:Linux iZbp1523gzqhydo0qaaw1tZ 4.15.0-163-generic #171-Ubuntu SMP Fri Nov 5 11:55:11 UTC 2021 x86_64
+æœ€è¿‘5æ¬¡ç™»å½•ç”¨æˆ·ã€ç™»å½•æ—¶é—´:
 reboot   system boot  4.15.0-163-gener Wed Jan 26 00:55   still running
 reboot   system boot  4.15.0-163-gener Tue Jan 25 23:10 - 16:55  (-6:14)
 root     pts/0        175.184.129.41   Wed Jan 19 13:00 - 13:02  (00:01)
@@ -188,7 +188,7 @@ root     pts/5        175.184.129.41   Mon Jan 17 15:25 - 15:25  (00:00)
 root     pts/0        175.184.129.41   Mon Jan 17 13:45 - 15:59  (02:14)
 root     pts/0        222.240.98.194   Sat Jan  8 10:55 - 10:55  (00:00)
 root     pts/0        116.162.95.203   Thu Jan  6 13:20 - 13:21  (00:00)
-×î½ü5Ìõ±»Ê¹ÓÃ¹ıµÄÃüÁî:
+æœ€è¿‘5æ¡è¢«ä½¿ç”¨è¿‡çš„å‘½ä»¤:
 tric/afl-fuzz -S slave4 -m 1000 -i /root/work/testcases/input_cve/pdf -o /root/work/tortoiseDir/outs/podofoencrypt -- /root/work/tortoiseDir/podofo-0.9.7/build/tools/podofoencrypt/podofoencrypt --rc4v2 -u 1232321 -o 24 @@ /dev/null
 /root/work/collafl-master/afl-fuzz -S slave4 -m 1000 -i /root/work/testcases/input_cve/pdf -o /root/work/collaflDir/outs/podofoencrypt -- /root/work/collaflDir/podofo-0.9.7/build/tools/podofoencrypt/podofoencrypt --rc4v2 -u 1232321 -o 24 @@ /dev/null
 /root/work/memAfl/afl-fuzz -S slave4 -m 1000 -i /root/work/testcases/input_cve/asm -o /root/work/memaflDir/outs/nasm -- /root/work/collaflDir/nasm-2.15.05/nasm  -f elf64 @@
@@ -196,3 +196,11 @@ tric/afl-fuzz -S slave4 -m 1000 -i /root/work/testcases/input_cve/pdf -o /root/w
 /root/work/memAfl/afl-fuzz -S slave4 -m 1000 -i /root/work/testcases/input_cve/asm -o /root/work/memaflDir/outs/nasm -- /root/work/collaflDir/nasm-2.15.05/nasm  -f elf64 @@
 /root/work/memAfl/afl-fuzz -S slave4 -m 1000 -i /root/work/testcases/input_cve/pdf -o /root/work/memaflDir/outs/sam2p -- /root/work/memaflDir/sam2p-0.49.4/sam2p  @@
 ------------------------------
+    Core #3:  AVAILABLE     (100%)
+    Core #5:  AVAILABLE     (100%)
+    Core #1:  AVAILABLE     (100%)
+    Core #2:  AVAILABLE     (100%)
+    Core #6:  AVAILABLE     (100%)
+    Core #4:  AVAILABLE     (100%)
+    Core #0:  AVAILABLE     (100%)
+    Core #7:  AVAILABLE     (100%)

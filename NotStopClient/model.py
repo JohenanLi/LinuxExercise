@@ -24,7 +24,7 @@ class Backend(QObject):
         # #链接地址和端口,元组(本地，端口)
         # self.client.connect(('47.118.34.75',50007))
         self.timer = QTimer()
-        self.timer.setInterval(4000)
+        self.timer.setInterval(1000)
         self.timer.timeout.connect(self.update_time)
         self.timer.timeout.connect(self.getAllInfo)
         self.timer.start()

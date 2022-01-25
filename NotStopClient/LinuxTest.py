@@ -1,11 +1,5 @@
 from random import randint
 from subprocess import getoutput,Popen
-<<<<<<< HEAD
-=======
-from tkinter import S
-
-from simplejson import load
->>>>>>> 33a1bbb41f799208d0f46f921d9dd0eae3fb6d4a
 import re
 import json
 import socket
@@ -199,22 +193,15 @@ def fileSocket():
     client = socket.socket()
 
     #链接地址和端口,元组(本地，端口)
-<<<<<<< HEAD
     client.connect(('47.118.34.75',50007))
-=======
-    client.connect(('127.0.0.1',50007))
->>>>>>> 33a1bbb41f799208d0f46f921d9dd0eae3fb6d4a
     client.send("getInfo:".encode("utf-8")) #send只能发送bytes格式数据
     received_data = client.recv(102400)
     with open("textrecv/monitor.txt","w") as f:
         f.write(received_data.decode('utf-8',errors="ignore"))
         f.close()
     client.close()
-<<<<<<< HEAD
     print("file ok")
     
-=======
->>>>>>> 33a1bbb41f799208d0f46f921d9dd0eae3fb6d4a
 if __name__=="__main__":
     # print(getLoadAvg())
     # getMemoryInfo()

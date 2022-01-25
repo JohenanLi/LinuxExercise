@@ -15,16 +15,20 @@ ApplicationWindow {
             Action {
                     id: execAction
                     text: qsTr("&E执行命令")
-                    onTriggered: console.log("aaa")
+                    onTriggered: {
+                        execdialog.open()
+                    }
                     
             }
         }
-        Menu{
-            title: qsTr("帮助")
-            Action { text: qsTr("&A关于")
-                    onTriggered: dialog.visible=true
-                    }
-            }
+        // Menu{
+        //     title: qsTr("帮助")
+        //     Action { text: qsTr("&A关于")
+        //             onTriggered: {
+        //                 console.log("About")
+        //             }
+        //             }
+        //     }
         
         Menu{
             title: qsTr("退出")
@@ -35,14 +39,88 @@ ApplicationWindow {
         }
         }
     Dialog {
-    id: dialog
-    title: "Title"
-    standardButtons: Dialog.Ok | Dialog.Cancel
+    id: execdialog
+    width: 800
+    height: 600
+    anchors.centerIn: parent
+    title: "命令执行框"
+    contentItem: Rectangle{
+        Rectangle {
+        id: rectangle
+        x: 24
+        y: 34
+        width: 184
+        height: 48
+        color: "#dae1e5"
 
-    onAccepted: console.log("Ok clicked")
-    onRejected: console.log("Cancel clicked")
-}
+        Text {
+            id: element
+            text: qsTr("命令输入：")
+            anchors.rightMargin: 90
+            anchors.bottomMargin: 8
+            anchors.fill: parent
+            font.pixelSize: 37
+        }
+    }
 
+    Rectangle {
+        id: rectangle1
+        x: 227
+        y: 34
+        width: 531
+        height: 48
+        color: "#ffffff"
+        border.color: "#ef3a3a"
+
+        TextInput {
+            id: execInputText
+            text: qsTr("在这里输入命令")
+            selectionColor: "#2edbef"
+            anchors.fill: parent
+            font.pixelSize: 37
+        }
+    }
+
+    Rectangle {
+        id: rectangle2
+        x: 24
+        y: 100
+        width: 734
+        height: 399
+        color: "#f8fafb"
+        border.color: "#2edbef"
+
+        TextField {
+            id: execResultText
+            text: "在这里显示结果"
+            anchors.fill: parent
+            placeholderText: qsTr("Text Field")
+        }
+    }
+
+    Button {
+        id: execbutton
+        x: 483
+        y: 523
+        text: qsTr("执行命令")
+        onClicked:{
+            console.log(execInputText.text)
+            console.log(execResultText.text)
+        }
+    }
+    
+    Button {
+        id: quitbutton
+        x: 640
+        y: 523
+        text: qsTr("退出")
+        onClicked:{
+            execdialog.close()
+        }
+    }
+    }
+        
+    }
     SwipeView {
         id: swipeView
         visible: true
