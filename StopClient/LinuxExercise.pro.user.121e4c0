@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.11.1, 2022-01-21T14:27:27. -->
+<!-- Written by QtCreator 4.11.1, 2022-01-24T21:32:31. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -286,8 +286,8 @@
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">LinuxExercise2</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/home/minipython/桌面/LinuxExercise/client/LinuxExercise.pro</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/home/minipython/桌面/LinuxExercise/client/LinuxExercise.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/home/minipython/桌面/LinuxExercise/NotStopClient/LinuxExercise.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/home/minipython/桌面/LinuxExercise/NotStopClient/LinuxExercise.pro</value>
     <value type="QString" key="RunConfiguration.Arguments"></value>
     <value type="bool" key="RunConfiguration.Arguments.multi">false</value>
     <value type="QString" key="RunConfiguration.OverrideDebuggerStartup"></value>
