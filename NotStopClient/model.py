@@ -1,10 +1,11 @@
 import socket
-from PySide6.QtCore import QObject,Signal
-from PySide6.QtCore import QTimer,QObject,Signal
+from PySide6.QtCore import QTimer,QObject,Signal,Slot
+from PySide6.QtQml import QmlElement
 from time import strftime,localtime,sleep
 import json
 from LinuxTest import randomcolor
 import re
+send_cmd = "在这里输入命令"
 class Backend(QObject):
 
     #设置各类信号量
@@ -16,6 +17,7 @@ class Backend(QObject):
     systemInfo = Signal(str)
     networkInfo = Signal(str)
     cpuCount = Signal(int)
+    cmdResult = Signal(str)
     #计时器设置
     def __init__(self) -> None:
         super().__init__()
@@ -27,10 +29,16 @@ class Backend(QObject):
         self.timer.setInterval(1000)
         self.timer.timeout.connect(self.update_time)
         self.timer.timeout.connect(self.getAllInfo)
+        self.timer.timeout.connect(self.exec)
         self.timer.start()
     def update_time(self):
         curr_time = strftime("%H:%M:%S",localtime())
-        self.updated.emit(curr_time)
+        self.updated.emit(curr_time)                                                                 
+    def exec(self):
+        global send_cmd                                                
+        if send_cmd != "在这里输入命令":
+            print(send_cmd)
+            self.cmdResult.emit("result") 
     def fileSocket(self):
         self.client.send("getInfo:".encode("utf-8")) #send只能发送bytes格式数据
         received_data = self.client.recv(102400)
@@ -148,4 +156,17 @@ class Backend(QObject):
                 # exit(-1)
 
                     
+
+QML_IMPORT_NAME = "examples.signals.qmltopy1"
+QML_IMPORT_MAJOR_VERSION = 1
+
+
+@QmlElement
+class Console(QObject):
+    """Output stuff on the console."""
+
+    @Slot(str)
+    def output(self, s):
+        global send_cmd
+        send_cmd = s
 

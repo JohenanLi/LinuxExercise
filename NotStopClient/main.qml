@@ -1,15 +1,27 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
-
+import examples.signals.qmltopy1 1.0
 ApplicationWindow {
     id: applicationWindow
+    objectName:"mainwindow"
     width: 1024
     height: 768
     property alias swipeView: swipeView
     visible: true
     title: qsTr("Linux检测客户端")
+    property QtObject backend
+    Connections{
+        target:backend
+        function onCmdResult(msg){
+            execResultText.text = msg
+        }
+    }
+    Console {
+        id: pyConsole
+    }
+
     menuBar: MenuBar {
-        // spacing: 50
+        spacing: 50
         Menu{
             title: qsTr("命令")
             Action {
@@ -21,14 +33,7 @@ ApplicationWindow {
                     
             }
         }
-        // Menu{
-        //     title: qsTr("帮助")
-        //     Action { text: qsTr("&A关于")
-        //             onTriggered: {
-        //                 console.log("About")
-        //             }
-        //             }
-        //     }
+
         
         Menu{
             title: qsTr("退出")
@@ -93,19 +98,24 @@ ApplicationWindow {
         TextField {
             id: execResultText
             text: "在这里显示结果"
+            objectName: "resultText"
             anchors.fill: parent
             placeholderText: qsTr("Text Field")
+
         }
-    }
+        }
+    
 
     Button {
         id: execbutton
+        objectName: "execbutton"
         x: 483
         y: 523
         text: qsTr("执行命令")
         onClicked:{
-            console.log(execInputText.text)
-            console.log(execResultText.text)
+                pyConsole.output(execInputText.text)
+        }
+
         }
     }
     
@@ -120,7 +130,7 @@ ApplicationWindow {
     }
     }
         
-    }
+    
     SwipeView {
         id: swipeView
         visible: true
