@@ -59,18 +59,6 @@ Page{
                 spacing: 10
             }
         }
-Slider {
-    id: slider
-    x: 765
-    y: -39
-    value: 0.5
 
-    Label {
-        id: label
-        x: 34
-        y: -15
-        text: qsTr("超过")+slider.value+"%"+"不可用时报警"
-    }
-}
 }
 }
