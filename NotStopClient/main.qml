@@ -14,6 +14,7 @@ ApplicationWindow {
         target:backend
         function onCmdResult(msg){
             execResultText.text = msg
+            
         }
     }
     Console {
@@ -98,12 +99,16 @@ ApplicationWindow {
         color: "#f8fafb"
         border.color: "#2edbef"
 
-        TextField {
+        Text {
             id: execResultText
             text: "在这里显示结果"
             objectName: "resultText"
             anchors.fill: parent
-            placeholderText: qsTr("Text Field")
+            // lineHeight: Text.ProportionalHeight //设置行间距
+            wrapMode: Text.WordWrap //换行
+            font.pixelSize: 15 
+            fontSizeMode: Text.Fit //固定 Text 显示大小->字体自动变化的模式选中还有几种看文档
+            minimumPixelSize: 10 
 
         }
         }

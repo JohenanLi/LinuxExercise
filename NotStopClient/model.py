@@ -5,7 +5,10 @@ from time import strftime,localtime,sleep
 import json
 from LinuxTest import randomcolor
 import re
+HOST = "47.118.34.75"
+PORT = 50007
 send_cmd = "在这里输入命令"
+mycount = 0
 class Backend(QObject):
 
     #设置各类信号量
@@ -24,24 +27,28 @@ class Backend(QObject):
         self.client = socket.socket()
 
         #链接地址和端口,元组(本地，端口)
-        self.client.connect(('47.118.34.75',50007))
+        self.client.connect((HOST,PORT))
         self.execsocket = socket.socket()
         
         self.timer = QTimer()
-        self.timer.setInterval(1000)
+        self.timer.setInterval(3000)
         self.timer.timeout.connect(self.update_time)
         self.timer.timeout.connect(self.getAllInfo)
         self.timer.timeout.connect(self.exec)
         self.timer.start()
+        self.fileCount = 0
     def update_time(self):
         curr_time = strftime("%H:%M:%S",localtime())
         self.updated.emit(curr_time)                                                                 
     def exec(self):
-        global send_cmd                                                
-        if send_cmd != "在这里输入命令":
+        global send_cmd
+        global mycount                                                
+        if send_cmd != "在这里输入命令" and mycount == 1:
             self.timer.stop()
-            print(self.client.detach())
-            self.execsocket.connect(('47.118.34.75',50007))
+            self.client.close()
+            self.execsocket = socket.socket()
+            self.execsocket.connect((HOST,PORT))
+            
             cmd = "command:"+send_cmd
 
             #发送数据 b将字符串转为bys类型
@@ -50,27 +57,27 @@ class Backend(QObject):
              
             # cmd_res = self.client.recv(102400)
             new_res = self.execsocket.recv(4096)
-            received_data = new_res.decode("utf-8")
-            print(received_data)
+            received_data = str(new_res.decode("utf-8",errors="ignore")).strip("\x00")
+
             self.cmdResult.emit(received_data)
-            self.timer.start()
+            self.execsocket.close()
+            self.client = socket.socket()
+            self.client.connect(('47.118.34.75',50007))
             
-        # else:
-        #     if self.timer.isActive():
-        #         pass
-        #     else:
-        #         self.timer.timeout.connect(self.getAllInfo)
+            self.timer.start()
+            mycount =0
+
     def fileSocket(self):
         self.client.send("getInfo:".encode("utf-8")) #send只能发送bytes格式数据
         received_data = self.client.recv(102400)
         with open("textrecv/monitor.txt","w") as f:
             f.write(received_data.decode('utf-8',errors="ignore"))
             f.close()
-        
-        print("file ok")
+        self.fileCount+=1
+        print("file ok",self.fileCount)
     #获取各类信息并且形成json格式
     def getAllInfo(self):
-        # self.fileSocket()
+        self.fileSocket()
         
         allInfoFileDes = open("./textrecv/monitor.txt","r")
         allInfoStr = allInfoFileDes.read(102400)
@@ -174,7 +181,7 @@ class Backend(QObject):
             except Exception as e:
                 print("数据获取异常")
                 # exit(-1)
-        self.fileSocket()
+        
 
                     
 
@@ -188,6 +195,8 @@ class Console(QObject):
 
     @Slot(str)
     def output(self, s):
+        global mycount
         global send_cmd
         send_cmd = s
+        mycount += 1
 
