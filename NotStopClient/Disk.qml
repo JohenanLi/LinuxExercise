@@ -70,7 +70,7 @@ Slider {
         id: label
         x: 34
         y: -15
-        text: qsTr("超过x个不可用时报警")
+        text: qsTr("超过")+slider.value+"%"+"不可用时报警"
     }
 }
 }

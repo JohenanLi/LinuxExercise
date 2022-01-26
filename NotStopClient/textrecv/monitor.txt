@@ -6,43 +6,43 @@ cpu总核数:4
 cpu型号信息:      8  Intel(R) Xeon(R) Platinum 8369HC CPU @ 3.30GHz
 
 
-Wed Jan 26 15:37:44 CST 2022
-1分钟负载:2.57
-5分钟负载:2.57
-15分钟负载:2.15
+Wed Jan 26 17:13:59 CST 2022
+1分钟负载:3.03
+5分钟负载:3.03
+15分钟负载:3.49
 ------------------------------
 内存信息:
 MemTotal:       15890636 kB
-MemFree:        13063804 kB
-MemAvailable:   14654152 kB
-Buffers:          423764 kB
-Cached:          1249084 kB
+MemFree:         5175112 kB
+MemAvailable:   14587680 kB
+Buffers:          427144 kB
+Cached:          8852136 kB
 SwapCached:            0 kB
-Active:          1663284 kB
-Inactive:         648580 kB
-Active(anon):     637280 kB
-Inactive(anon):     6820 kB
-Active(file):    1026004 kB
-Inactive(file):   641760 kB
+Active:          1694980 kB
+Inactive:        8250160 kB
+Active(anon):     664160 kB
+Inactive(anon):     6828 kB
+Active(file):    1030820 kB
+Inactive(file):  8243332 kB
 Unevictable:          32 kB
 Mlocked:              32 kB
 SwapTotal:             0 kB
 SwapFree:              0 kB
-Dirty:               108 kB
+Dirty:             15020 kB
 Writeback:             0 kB
-AnonPages:        635140 kB
-Mapped:           313284 kB
-Shmem:              7608 kB
-Slab:             357988 kB
-SReclaimable:     258244 kB
-SUnreclaim:        99744 kB
-KernelStack:        7408 kB
-PageTables:        19552 kB
+AnonPages:        662100 kB
+Mapped:           315800 kB
+Shmem:              7616 kB
+Slab:             589276 kB
+SReclaimable:     474072 kB
+SUnreclaim:       115204 kB
+KernelStack:        7444 kB
+PageTables:        19944 kB
 NFS_Unstable:          0 kB
 Bounce:                0 kB
 WritebackTmp:          0 kB
 CommitLimit:     7945316 kB
-Committed_AS:    2805260 kB
+Committed_AS:    2795032 kB
 VmallocTotal:   34359738367 kB
 VmallocUsed:           0 kB
 VmallocChunk:          0 kB
@@ -57,20 +57,20 @@ HugePages_Free:        0
 HugePages_Rsvd:        0
 HugePages_Surp:        0
 Hugepagesize:       2048 kB
-DirectMap4k:      236216 kB
-DirectMap2M:     6561792 kB
+DirectMap4k:      459448 kB
+DirectMap2M:     6338560 kB
 DirectMap1G:     9437184 kB
 ------------------------------
 输入输出设备信息:
 Device            r/s     w/s     rkB/s     wkB/s   rrqm/s   wrqm/s  %rrqm  %wrqm r_await w_await aqu-sz rareq-sz wareq-sz  svctm  %util
-vda              1.26    3.21     16.66    159.10     0.00     3.19   0.00  49.81    2.70    3.57   0.01    13.22    49.55   0.18   0.08
+vda              1.18    3.74     15.57    237.35     0.00     3.25   0.04  46.49    2.70    4.64   0.02    13.21    63.44   0.23   0.11
 
 ------------------------------
 文件系统信息:
 Filesystem      Size  Used Avail Use% Mounted on
 udev            7.6G     0  7.6G   0% /dev
 tmpfs           1.6G  7.5M  1.6G   1% /run
-/dev/vda1        50G   37G   11G  78% /
+/dev/vda1        50G   44G  3.5G  93% /
 tmpfs           7.6G  4.0K  7.6G   1% /dev/shm
 tmpfs           5.0M     0  5.0M   0% /run/lock
 tmpfs           7.6G     0  7.6G   0% /sys/fs/cgroup
@@ -81,9 +81,9 @@ eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
         inet 172.30.71.253  netmask 255.255.240.0  broadcast 172.30.79.255
         inet6 fe80::216:3eff:fe18:d002  prefixlen 64  scopeid 0x20<link>
         ether 00:16:3e:18:d0:02  txqueuelen 1000  (Ethernet)
-        RX packets 197123  bytes 65275549 (65.2 MB)
+        RX packets 243012  bytes 70769439 (70.7 MB)
         RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 129646  bytes 132255017 (132.2 MB)
+        TX packets 172506  bytes 154428969 (154.4 MB)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 
 ------------------------------
@@ -196,11 +196,3 @@ tric/afl-fuzz -S slave4 -m 1000 -i /root/work/testcases/input_cve/pdf -o /root/w
 /root/work/memAfl/afl-fuzz -S slave4 -m 1000 -i /root/work/testcases/input_cve/asm -o /root/work/memaflDir/outs/nasm -- /root/work/collaflDir/nasm-2.15.05/nasm  -f elf64 @@
 /root/work/memAfl/afl-fuzz -S slave4 -m 1000 -i /root/work/testcases/input_cve/pdf -o /root/work/memaflDir/outs/sam2p -- /root/work/memaflDir/sam2p-0.49.4/sam2p  @@
 ------------------------------
-    Core #4:  AVAILABLE     (100%)
-    Core #1:  AVAILABLE     (100%)
-    Core #0:  AVAILABLE     (100%)
-    Core #2:  AVAILABLE     (100%)
-    Core #3:  AVAILABLE     (100%)
-    Core #5:  AVAILABLE     (100%)
-    Core #6:  AVAILABLE     (102%)
-    Core #7:  AVAILABLE     (104%)

@@ -26,7 +26,10 @@ Page{
             for(var i=0;i<arr.length;i++){
                 cpuLoadModel.append(a["ListElement"+i])
             }
-
+            if(a["ListElement4"].value < cpuslider.value )
+            {
+                
+            }
         }
         }
 
@@ -61,16 +64,17 @@ Page{
             }
         }
 Slider {
-    id: slider
+    id: cpuslider
     x: 765
     y: -39
-    value: 0.5
+    value: 4
+    to: 8
 
     Label {
         id: label
         x: 34
         y: -15
-        text: qsTr("超过x个不可用时报警")
+        text: qsTr("超过")+cpuslider.value+"%"+"不可用时报警"
     }
 }
 }
