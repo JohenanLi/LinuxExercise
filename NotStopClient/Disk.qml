@@ -26,7 +26,8 @@ Page{
             for(var i=0;i<arr.length;i++){
                 diskModel.append(a["ListElement"+i])
             }
-
+            var numerator = a["ListElement3"].value.match(/\d+/g)
+            console.log(numerator)
         }
         }
 
