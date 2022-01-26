@@ -27,9 +27,10 @@ Page{
                 diskModel.append(a["ListElement"+i])
             }
             var numarr = a["ListElement3"].value.match(/\d+/g)
-            var numerator = numarr[2]
-            var denominator = numarr[1]
-            if((100 -(numerator / denominator)*100) <  diskslider.value)
+            // var numerator = numarr[2]
+            // var denominator = numarr[1]
+            var useDisk = numarr[4]
+            if(100 -(useDisk) <  diskslider.value)
             {
                 root.x = (parent.width - dialog.width) * 0.5
                 root.y = (parent.height - dialog.height) * 0.5

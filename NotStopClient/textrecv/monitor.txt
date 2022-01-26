@@ -6,43 +6,43 @@ cpu总核数:4
 cpu型号信息:      8  Intel(R) Xeon(R) Platinum 8369HC CPU @ 3.30GHz
 
 
-Wed Jan 26 17:25:11 CST 2022
-1分钟负载:3.05
-5分钟负载:3.05
-15分钟负载:3.39
+Wed Jan 26 17:41:37 CST 2022
+1分钟负载:2.79
+5分钟负载:2.79
+15分钟负载:2.94
 ------------------------------
 内存信息:
 MemTotal:       15890636 kB
-MemFree:         3532836 kB
-MemAvailable:   14570108 kB
-Buffers:          427608 kB
-Cached:         10429388 kB
+MemFree:        13019324 kB
+MemAvailable:   14628860 kB
+Buffers:          428092 kB
+Cached:          1256296 kB
 SwapCached:            0 kB
-Active:          1702760 kB
-Inactive:        9827608 kB
-Active(anon):     671404 kB
+Active:          1678864 kB
+Inactive:         654224 kB
+Active(anon):     646968 kB
 Inactive(anon):     6824 kB
-Active(file):    1031356 kB
-Inactive(file):  9820784 kB
+Active(file):    1031896 kB
+Inactive(file):   647400 kB
 Unevictable:          32 kB
 Mlocked:              32 kB
 SwapTotal:             0 kB
 SwapFree:              0 kB
-Dirty:             48764 kB
+Dirty:                 4 kB
 Writeback:             0 kB
-AnonPages:        668800 kB
-Mapped:           316936 kB
+AnonPages:        644168 kB
+Mapped:           317256 kB
 Shmem:              7612 kB
-Slab:             639668 kB
-SReclaimable:     520788 kB
-SUnreclaim:       118880 kB
-KernelStack:        7328 kB
-PageTables:        19528 kB
+Slab:             376444 kB
+SReclaimable:     265896 kB
+SUnreclaim:       110548 kB
+KernelStack:        7448 kB
+PageTables:        19776 kB
 NFS_Unstable:          0 kB
 Bounce:                0 kB
 WritebackTmp:          0 kB
 CommitLimit:     7945316 kB
-Committed_AS:    2808796 kB
+Committed_AS:    2797880 kB
 VmallocTotal:   34359738367 kB
 VmallocUsed:           0 kB
 VmallocChunk:          0 kB
@@ -63,14 +63,14 @@ DirectMap1G:     9437184 kB
 ------------------------------
 输入输出设备信息:
 Device            r/s     w/s     rkB/s     wkB/s   rrqm/s   wrqm/s  %rrqm  %wrqm r_await w_await aqu-sz rareq-sz wareq-sz  svctm  %util
-vda              1.17    3.91     15.45    253.46     0.00     3.27   0.04  45.52    2.70    4.73   0.02    13.21    64.80   0.23   0.12
+vda              1.16    3.93     15.28    253.34     0.00     3.28   0.04  45.50    2.70    4.69   0.02    13.21    64.43   0.23   0.12
 
 ------------------------------
 文件系统信息:
 Filesystem      Size  Used Avail Use% Mounted on
 udev            7.6G     0  7.6G   0% /dev
 tmpfs           1.6G  7.5M  1.6G   1% /run
-/dev/vda1        50G   45G  2.0G  96% /
+/dev/vda1        50G   37G   11G  78% /
 tmpfs           7.6G  4.0K  7.6G   1% /dev/shm
 tmpfs           5.0M     0  5.0M   0% /run/lock
 tmpfs           7.6G     0  7.6G   0% /sys/fs/cgroup
@@ -81,9 +81,9 @@ eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
         inet 172.30.71.253  netmask 255.255.240.0  broadcast 172.30.79.255
         inet6 fe80::216:3eff:fe18:d002  prefixlen 64  scopeid 0x20<link>
         ether 00:16:3e:18:d0:02  txqueuelen 1000  (Ethernet)
-        RX packets 250281  bytes 71382064 (71.3 MB)
+        RX packets 253433  bytes 71830041 (71.8 MB)
         RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 180496  bytes 156989182 (156.9 MB)
+        TX packets 183557  bytes 161128717 (161.1 MB)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 
 ------------------------------
@@ -196,11 +196,11 @@ tric/afl-fuzz -S slave4 -m 1000 -i /root/work/testcases/input_cve/pdf -o /root/w
 /root/work/memAfl/afl-fuzz -S slave4 -m 1000 -i /root/work/testcases/input_cve/asm -o /root/work/memaflDir/outs/nasm -- /root/work/collaflDir/nasm-2.15.05/nasm  -f elf64 @@
 /root/work/memAfl/afl-fuzz -S slave4 -m 1000 -i /root/work/testcases/input_cve/pdf -o /root/work/memaflDir/outs/sam2p -- /root/work/memaflDir/sam2p-0.49.4/sam2p  @@
 ------------------------------
-    Core #0:  AVAILABLE     (105%)
-    Core #2:  AVAILABLE     (107%)
+    Core #5:  AVAILABLE     (100%)
     Core #7:  AVAILABLE     (100%)
-    Core #4:  AVAILABLE     (105%)
-    Core #3:  AVAILABLE     (106%)
-    Core #1:  AVAILABLE     (109%)
-    Core #5:  CAUTION     (123%)
-    Core #6:  AVAILABLE     (104%)
+    Core #1:  AVAILABLE     (100%)
+    Core #3:  AVAILABLE     (100%)
+    Core #4:  AVAILABLE     (100%)
+    Core #6:  AVAILABLE     (100%)
+    Core #0:  AVAILABLE     (100%)
+    Core #2:  AVAILABLE     (100%)
