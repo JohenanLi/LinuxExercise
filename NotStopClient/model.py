@@ -21,10 +21,12 @@ class Backend(QObject):
     #计时器设置
     def __init__(self) -> None:
         super().__init__()
-        # self.client = socket.socket()
+        self.client = socket.socket()
 
-        # #链接地址和端口,元组(本地，端口)
-        # self.client.connect(('47.118.34.75',50007))
+        #链接地址和端口,元组(本地，端口)
+        self.client.connect(('47.118.34.75',50007))
+        self.execsocket = socket.socket()
+        
         self.timer = QTimer()
         self.timer.setInterval(1000)
         self.timer.timeout.connect(self.update_time)
@@ -37,8 +39,27 @@ class Backend(QObject):
     def exec(self):
         global send_cmd                                                
         if send_cmd != "在这里输入命令":
-            print(send_cmd)
-            self.cmdResult.emit("result") 
+            self.timer.stop()
+            print(self.client.detach())
+            self.execsocket.connect(('47.118.34.75',50007))
+            cmd = "command:"+send_cmd
+
+            #发送数据 b将字符串转为bys类型
+            self.execsocket.send(cmd.encode("utf-8")) #send只能发送bytes格式数据
+            #接收服务器端的返回(长度和详细内容)，需要声明收多少，默认1024字节
+             
+            # cmd_res = self.client.recv(102400)
+            new_res = self.execsocket.recv(4096)
+            received_data = new_res.decode("utf-8")
+            print(received_data)
+            self.cmdResult.emit(received_data)
+            self.timer.start()
+            
+        # else:
+        #     if self.timer.isActive():
+        #         pass
+        #     else:
+        #         self.timer.timeout.connect(self.getAllInfo)
     def fileSocket(self):
         self.client.send("getInfo:".encode("utf-8")) #send只能发送bytes格式数据
         received_data = self.client.recv(102400)
@@ -49,7 +70,6 @@ class Backend(QObject):
         print("file ok")
     #获取各类信息并且形成json格式
     def getAllInfo(self):
-        # sleep(2.0)
         # self.fileSocket()
         
         allInfoFileDes = open("./textrecv/monitor.txt","r")
@@ -154,6 +174,7 @@ class Backend(QObject):
             except Exception as e:
                 print("数据获取异常")
                 # exit(-1)
+        self.fileSocket()
 
                     
 

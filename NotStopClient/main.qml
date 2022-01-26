@@ -38,7 +38,10 @@ ApplicationWindow {
         Menu{
             title: qsTr("退出")
             Action { text: qsTr("&Q退出")
-                    onTriggered: Qt.quit()
+                    onTriggered: {
+
+                        Qt.quit()
+                    }
                     
             }
         }
@@ -125,6 +128,8 @@ ApplicationWindow {
         y: 523
         text: qsTr("退出")
         onClicked:{
+            execInputText.text = "在这里输入命令"
+            pyConsole.output("在这里输入命令")
             execdialog.close()
         }
     }

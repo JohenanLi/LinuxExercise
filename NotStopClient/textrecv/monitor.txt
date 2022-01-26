@@ -6,43 +6,43 @@ cpu总核数:4
 cpu型号信息:      8  Intel(R) Xeon(R) Platinum 8369HC CPU @ 3.30GHz
 
 
-Tue Jan 25 17:39:16 CST 2022
-1分钟负载:1.39
-5分钟负载:1.39
-15分钟负载:1.40
+Wed Jan 26 13:27:15 CST 2022
+1分钟负载:2.22
+5分钟负载:2.22
+15分钟负载:2.61
 ------------------------------
 内存信息:
 MemTotal:       15890636 kB
-MemFree:        14265368 kB
-MemAvailable:   15121040 kB
-Buffers:           99216 kB
-Cached:           953304 kB
+MemFree:         3348412 kB
+MemAvailable:   14624176 kB
+Buffers:          418756 kB
+Cached:         10677836 kB
 SwapCached:            0 kB
-Active:           703152 kB
-Inactive:         582156 kB
-Active(anon):     231060 kB
-Inactive(anon):     6764 kB
-Active(file):     472092 kB
-Inactive(file):   575392 kB
-Unevictable:           0 kB
-Mlocked:               0 kB
+Active:          1657692 kB
+Inactive:       10085484 kB
+Active(anon):     644896 kB
+Inactive(anon):     6824 kB
+Active(file):    1012796 kB
+Inactive(file): 10078660 kB
+Unevictable:          32 kB
+Mlocked:              32 kB
 SwapTotal:             0 kB
 SwapFree:              0 kB
-Dirty:                72 kB
+Dirty:            169892 kB
 Writeback:             0 kB
-AnonPages:        229440 kB
-Mapped:           201276 kB
-Shmem:              7552 kB
-Slab:             207580 kB
-SReclaimable:     119072 kB
-SUnreclaim:        88508 kB
-KernelStack:        5444 kB
-PageTables:        12916 kB
+AnonPages:        642368 kB
+Mapped:           312568 kB
+Shmem:              7612 kB
+Slab:             624356 kB
+SReclaimable:     519972 kB
+SUnreclaim:       104384 kB
+KernelStack:        7396 kB
+PageTables:        19808 kB
 NFS_Unstable:          0 kB
 Bounce:                0 kB
 WritebackTmp:          0 kB
 CommitLimit:     7945316 kB
-Committed_AS:    1726040 kB
+Committed_AS:    2806676 kB
 VmallocTotal:   34359738367 kB
 VmallocUsed:           0 kB
 VmallocChunk:          0 kB
@@ -57,20 +57,20 @@ HugePages_Free:        0
 HugePages_Rsvd:        0
 HugePages_Surp:        0
 Hugepagesize:       2048 kB
-DirectMap4k:      166584 kB
-DirectMap2M:     3485696 kB
-DirectMap1G:    12582912 kB
+DirectMap4k:      234168 kB
+DirectMap2M:     6563840 kB
+DirectMap1G:     9437184 kB
 ------------------------------
 输入输出设备信息:
 Device            r/s     w/s     rkB/s     wkB/s   rrqm/s   wrqm/s  %rrqm  %wrqm r_await w_await aqu-sz rareq-sz wareq-sz  svctm  %util
-vda             15.78    3.34    354.59     70.39     0.00     4.02   0.00  54.66    2.55    2.15   0.04    22.48    21.09   0.18   0.34
+vda              1.39    3.05     18.42    153.71     0.00     3.12   0.00  50.57    2.70    3.71   0.01    13.22    50.41   0.19   0.08
 
 ------------------------------
 文件系统信息:
 Filesystem      Size  Used Avail Use% Mounted on
 udev            7.6G     0  7.6G   0% /dev
-tmpfs           1.6G  7.4M  1.6G   1% /run
-/dev/vda1        50G   37G   11G  78% /
+tmpfs           1.6G  7.5M  1.6G   1% /run
+/dev/vda1        50G   46G  1.7G  97% /
 tmpfs           7.6G  4.0K  7.6G   1% /dev/shm
 tmpfs           5.0M     0  5.0M   0% /run/lock
 tmpfs           7.6G     0  7.6G   0% /sys/fs/cgroup
@@ -81,9 +81,9 @@ eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
         inet 172.30.71.253  netmask 255.255.240.0  broadcast 172.30.79.255
         inet6 fe80::216:3eff:fe18:d002  prefixlen 64  scopeid 0x20<link>
         ether 00:16:3e:18:d0:02  txqueuelen 1000  (Ethernet)
-        RX packets 19294  bytes 16365680 (16.3 MB)
+        RX packets 168350  bytes 61691563 (61.6 MB)
         RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 8710  bytes 5766692 (5.7 MB)
+        TX packets 102836  bytes 98019457 (98.0 MB)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 
 ------------------------------
@@ -178,6 +178,7 @@ floppy                 77824  0
 系统信息:
 内核版本:Linux iZbp1523gzqhydo0qaaw1tZ 4.15.0-163-generic #171-Ubuntu SMP Fri Nov 5 11:55:11 UTC 2021 x86_64
 最近5次登录用户、登录时间:
+root     pts/0        175.184.129.41   Wed Jan 26 11:24 - 11:25  (00:01)
 reboot   system boot  4.15.0-163-gener Wed Jan 26 00:55   still running
 reboot   system boot  4.15.0-163-gener Tue Jan 25 23:10 - 16:55  (-6:14)
 root     pts/0        175.184.129.41   Wed Jan 19 13:00 - 13:02  (00:01)
@@ -187,7 +188,6 @@ root     pts/0        175.184.129.41   Mon Jan 17 20:23 - 22:36  (02:13)
 root     pts/5        175.184.129.41   Mon Jan 17 15:25 - 15:25  (00:00)
 root     pts/0        175.184.129.41   Mon Jan 17 13:45 - 15:59  (02:14)
 root     pts/0        222.240.98.194   Sat Jan  8 10:55 - 10:55  (00:00)
-root     pts/0        116.162.95.203   Thu Jan  6 13:20 - 13:21  (00:00)
 最近5条被使用过的命令:
 tric/afl-fuzz -S slave4 -m 1000 -i /root/work/testcases/input_cve/pdf -o /root/work/tortoiseDir/outs/podofoencrypt -- /root/work/tortoiseDir/podofo-0.9.7/build/tools/podofoencrypt/podofoencrypt --rc4v2 -u 1232321 -o 24 @@ /dev/null
 /root/work/collafl-master/afl-fuzz -S slave4 -m 1000 -i /root/work/testcases/input_cve/pdf -o /root/work/collaflDir/outs/podofoencrypt -- /root/work/collaflDir/podofo-0.9.7/build/tools/podofoencrypt/podofoencrypt --rc4v2 -u 1232321 -o 24 @@ /dev/null
@@ -196,11 +196,11 @@ tric/afl-fuzz -S slave4 -m 1000 -i /root/work/testcases/input_cve/pdf -o /root/w
 /root/work/memAfl/afl-fuzz -S slave4 -m 1000 -i /root/work/testcases/input_cve/asm -o /root/work/memaflDir/outs/nasm -- /root/work/collaflDir/nasm-2.15.05/nasm  -f elf64 @@
 /root/work/memAfl/afl-fuzz -S slave4 -m 1000 -i /root/work/testcases/input_cve/pdf -o /root/work/memaflDir/outs/sam2p -- /root/work/memaflDir/sam2p-0.49.4/sam2p  @@
 ------------------------------
-    Core #3:  AVAILABLE     (100%)
-    Core #5:  AVAILABLE     (100%)
-    Core #1:  AVAILABLE     (100%)
-    Core #2:  AVAILABLE     (100%)
-    Core #6:  AVAILABLE     (100%)
-    Core #4:  AVAILABLE     (100%)
+    Core #4:  CAUTION     (111%)
+    Core #5:  AVAILABLE     (103%)
+    Core #7:  CAUTION     (110%)
     Core #0:  AVAILABLE     (100%)
-    Core #7:  AVAILABLE     (100%)
+    Core #1:  AVAILABLE     (100%)
+    Core #2:  CAUTION     (114%)
+    Core #6:  AVAILABLE     (102%)
+    Core #3:  CAUTION     (114%)
