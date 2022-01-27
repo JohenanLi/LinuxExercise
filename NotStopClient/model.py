@@ -179,7 +179,8 @@ class Backend(QObject):
                     cpuAvailCount  = re.findall("AVAILABLE",allInfoLines[i])
                     self.cpuCount.emit(cpuAvailCount)
             except Exception as e:
-                print("数据获取异常")
+                # print("数据获取异常")
+                pass
                 # exit(-1)
         
 
